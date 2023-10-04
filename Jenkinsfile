@@ -15,6 +15,11 @@ pipeline {
         sh '[ "This is my super app" = "$(curl http://localhost:8080/)" ]'
       }
     }
+    stage ('MEP') {
+      steps {
+        sh 'docker-compose up -d --force-recreate'
+      }
+    }
   }
   post {
     always {
