@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('init') {
       steps {
-        sh 'echo "hello-world"'
+        sh 'docker run hello-world'
       }
     }
   }
