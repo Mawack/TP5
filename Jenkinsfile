@@ -16,10 +16,10 @@ pipeline {
         sh 'docker rm -f test_jenkins'
       }
     }
-    post {
-      always {
-        sh 'docker rm -f test_jenkins'
-      }
+  }
+  post {
+    always {
+      sh 'docker rm -f test_jenkins'
     }
   }
 }
