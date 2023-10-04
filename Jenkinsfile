@@ -25,6 +25,7 @@ pipeline {
   post {
     always {
       sh 'docker rm -f test_jenkins'
+      sh 'docker rm -f my_server'
     }
   }
 }
