@@ -1,0 +1,6 @@
+web_server:
+image: my_server:latest
+container_name: my_server
+restart: always
+ports:
+- 8090:8080
