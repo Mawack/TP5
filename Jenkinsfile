@@ -6,6 +6,7 @@ pipeline {
     stage('Docker build') {
       steps {
         sh 'docker build -t my_server:latest - < Dockerfile'
+        sh 'docker images'
       }
     }
   }
