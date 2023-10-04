@@ -3,9 +3,9 @@ pipeline {
     label 'docker'
   }
   stages {
-    stage('init') {
+    stage('Docker build') {
       steps {
-        sh 'docker run hello-world'
+        sh 'docker build -t my_server:latest - < Dockerfile'
       }
     }
   }
